@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style type="text/css">
+        /* CSS COMBINATORS 
+        There are four types of combinatprs in css are Desecendant selector(space), chiled selector(>), Adjacent sibling selector(+), Genereal sibling selector(~)*/
+        /*h1{
+            text-align: center;
+            line-height: 70px;
+            background-color: navy;
+        }*/
+
+        /*div h1{  This is a Descendant Selector that selects all h1 elements that are inside a div element
+            text-align: center;
+            line-height: 70px;
+            background-color: aqua;
+        }*/
+
+        /*div > h1{ this is a child selector that selects all h1 elements that are direct children of a div element not nested inside another element
+            text-align: center;
+            line-height: 70px;
+            background-color: yellow;
+        }*/
+
+        /*div+h1 {
+            This is an Adjacent Sibling Selector that selects the first h1 element that is immediately preceded by a div element 
+            text-align: center;
+            line-height: 70px;
+            background-color: green;
+        }*/
+
+        div ~ h1{
+            /* This is a General Sibling Selector that selects all h1 elements that are siblings of a div element, not just the first one */
+            text-align: center;
+            line-height: 70px;
+            background-color: red;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <!-- Dom document object model -->
+    
+    <h1> Before Div Heading 1</h1>
+    <h1> Before Div Heading 2</h1>
+    
+    <div>
+        <h1>Inside Div Heading 3</h1>
+        <h1>Inside Div Heading 4</h1>
+
+        <span>
+            <h1>Inside Div Heading 5</h1>
+        </span>
+
+        <h1>Outside Div Heading 6</h1>
+        <h1>Outside Div Heading 7</h1>
+
+    </div>
+
+    <h1>After Div Heading 8</h1><!-- this h1 is just after the div element that is why it is selected by the adjacent sibling selector-->
+    <h1>After Div Heading 9</h1>
+    <h1>After Div Heading 10</h1>
+
+</body>
+</html>

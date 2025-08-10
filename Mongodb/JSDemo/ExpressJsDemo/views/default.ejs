@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default EJS</title>
+</head>
+<body>
+
+    <hr color="navy" size="5px"/>
+    <h1 align="center">Application Default Page</h1>
+    <h3 align="right">Welcome <%= name %></h3>
+    <!-- <h3 align="right">Welcome <%- name %></h3> -->
+    <hr color="navy" size="5px"/>
+
+    <!-- <%= msg %>  it is used to render the value with HTML escaping (safe for output) -->
+<!-- <%- msg %>  it is used to render the value as raw HTML (shows actual HTML tags) -->
+<!-- <% msg %>   it is used to write JavaScript code like if, for, etc. (does not print anything) -->
+
+
+    <% if(isValid){%>
+
+            <h4>Welcome <%= name%></h4>
+            <p class="alert alert-success" style="background-color: aqua;padding: 20px;">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates aspernatur quod veritatis 
+            ea quam eveniet magnam magni nesciunt qui repellendus, quibusdam, culpa ab, explicabo unde quo sunt obcaecati. Sunt, itaque!
+        </p>
+
+
+    <% } else { %>
+
+        <h4>Welcome Guest</h4>
+        <p class="alert alert-success" style="background-color: red;padding: 20px;">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates aspernatur quod veritatis 
+            ea quam eveniet magnam magni nesciunt qui repellendus, quibusdam, culpa ab, explicabo unde quo sunt obcaecati. Sunt, itaque!
+        </p>
+
+
+        <% } %>
+
+    
+</body>
+</html>

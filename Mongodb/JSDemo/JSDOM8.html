@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom8</title>
+    <script>
+
+    </script>
+</head>
+
+<body>
+
+    <div id="tabContainer"></div>
+
+    <button id="myBtn">Button</button>
+
+</body>
+
+<script>
+
+    let userData = [
+            {uid: 1001, unm:'Sachin', age:42, gender:'Male', dept:'CSE'},
+            {uid: 1002, unm:'Zaheer', age:53, gender:'Male', dept:'MCA'},
+            {uid: 1003, unm:'Sachuu', age:48, gender:'Male', dept:'EC'},
+            {uid: 1004, unm:'Sachin', age:45, gender:'Male', dept:'ME'},
+            {uid: 1005, unm:'Ankita', age:55, gender:'Female', dept:'AIML'}
+        ];
+
+        function createTable(data){
+            //TABLE CREATION AND ATTRIBUTES 
+            const myTable = document.createElement('table');
+            myTable.setAttribute('border', '2px')
+            myTable.setAttribute('width', '500px')
+            myTable.setAttribute('align', 'center')
+            myTable.setAttribute('bgcolor', '#ddd')
+
+            //CREATION OF TABLE HEAD
+            const tHead = document.createElement('thead');
+            const row = tHead.insertRow();
+
+            //READ FIELDS NAME AND OBJECT
+            const keys = Object.keys(data[0])//jab hum table bnate hai toh uski value or keys ko lene k liye hum object.keys and object.value ka use karte hai 
+            console.log(keys);
+
+            //CREATE HEADINGS USING KEYS(FIELD NAMES)
+            keys.forEach((key)=>{
+                let colhead = document.createElement('th');
+                colhead.textContent = key.toUpperCase()
+                colhead.style.backgroundColor = 'black'
+                colhead.style.color = 'white'
+                colhead.style.cursor = 'pointer'
+
+                colhead.addEventListener('click',()=>{
+                // alert('key')
+                const sortedData = [...userData].sort((a,b)=>{
+                    if(typeof  a[key] === 'number')
+                    return a[key] - b[key]
+                else if(typeof  a[key] === 'string')
+                return  a[key].localeCompare(b[key])
+                })
+                console.log(sortedData);
+                
+                })
+                row.append(colhead);
+            })
+            //APPEND HEAD INTO THE TABLE 
+
+            myTable.append(tHead);
+            // console.log(myTable);
+
+            //CREATION OF TABLE BODY
+            let tbody = document.createElement('tbody')
+            //ADD USER DATA INTO TABLE ROWS FROM EACH OBJECTS 
+            data.forEach((user)=>{
+                let row = tbody.insertRow();
+                const values = Object.values(user)
+                values.forEach((val)=>{
+                    let col = row.insertCell()
+                    col.textContent = val
+                })
+                //APPEND ROW INTO THE BODY
+                tbody.append(row)
+            })
+            //APPEND BODY INTO THE TABLE
+            myTable.append(tbody)
+
+            return myTable;
+            // console.log(myTable);
+        }
+
+        const btnEle = document.getElementById('myBtn');
+        btnEle.addEventListener('click',()=>{
+
+            const tab = document.getElementById('tabContainer')
+            tab.append(createTable(userData));
+            // createTable(userData);
+        })
+
+</script>
+
+</html>

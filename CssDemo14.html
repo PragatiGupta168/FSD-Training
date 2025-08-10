@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        input{
+            margin: 10px;
+            padding: 10px;
+        }
+
+        input:user-valid{
+            background-color: lightgreen;
+        }
+
+        input:user-invalid{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="Enter Name" required minlength="3"/><br />
+        <input type="password" placeholder="Enter pwd" required minlength="6"/><br />
+        <input type="email" placeholder="Enter Name" required /><br />
+        <input type="number" required min="1" max="10"/><br />
+        <input type="Submit"/><br />
+    </form>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo13 of JS</title>
+    <script>
+        
+        // FUNCTION CALLBACK USING FOR-EACH METHOD IN ARRAY
+
+        
+        //1: By using Function CallBack
+        // let arr = [100, 200, 300, 400, 500];
+        // function myCallBack(ele){
+        //     console.log(ele);
+        // }
+        // arr.forEach(myCallBack);
+
+        //2: By using Anonymous function
+        // let arr = [100, 200, 300, 400, 500];
+        // arr.forEach(function(ele){
+        // console.log(ele);
+        // })
+
+        //3: By using Arrow Function 
+        // let arr = [100, 200, 300, 400, 500];
+        // arr.forEach((ele) =>{
+        //     console.log(ele);
+            
+        // })
+
+        
+
+
+
+        //Assignment of Bank Transaction
+        
+            let trans = [
+            {type: "deposit", amount: 1000},
+            {type: "withdraw", amount: 600},
+            {type: "deposit", amount: 900},
+            {type: "withdraw", amount: 800},
+        ];
+        console.log(trans);
+        
+        let balance = 0;
+        function myCallBack(ele){
+            if(ele.type === "deposit")
+        {
+            balance += ele.amount;
+            console.log(`Deposited: ${ele.amount}, Balance:${balance}`);
+        }
+            else if(ele.type === "withdraw")
+        {
+            balance -= ele.amount;
+            console.log(`Withdraw: ${ele.amount}, Balance:${balance}`);
+        }
+        }
+        trans.forEach(myCallBack)
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post">
+    <table border="1px" width="400px" bgcolor="#ddd" align="center">
+    <thead>
+        <tr>
+            <td colspan=""
+        </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+    <td> User Name </td>
+    <td><input type="text"/></td>
+    </tr>
+
+<tr>
+    <td>Password</td>
+    <td><input type="password"/></td>
+</tr>
+
+<tr>
+    <td>Email</td>
+    <td><input type="email"/></td>
+</tr>
+
+<tr>
+    <td>Date Of Birth</td>
+    <td><input type="date"/></td>
+</tr>
+
+<tr>
+    <td>Gender</td>
+    <td><input type="radio" name="gen"/>Male
+    <input type="radio" name="gen"/>Female</td><!-- radio input is used to select one option from a group of options.-->
+</tr>
+
+<tr>
+    <td>Hobbies</td>
+    <td><input type="checkbox" name="chk1"/><!--swimming //checkbox is used to select multiple options--> 
+    <input type="checkbox" name="chk2"/>Reading
+    <input type="checkbox" name="chk3"/>Dancing
+    <input type="checkbox" name="chk4"/>Sleeping
+    <input type="checkbox" name="chk5"/>Travelling
+</td>
+</tr>
+
+<tr>
+    <td>Qualification</td>
+    <td>
+        <select><!--Select tag is used to create dropdown list.-->
+            <option disabled selected>--SELECT--</option><!--Disabled is used to disable the select option or disabled selected option is used to disable the default option.-->
+            <option selected>B.TECH</option><!--selected is used to select the default option.-->
+            <option>M.TECH</option>
+            <option>MBA</option>
+            <option>BBA</option>
+            <option>BCA</option>
+            <option>MCA</option>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td>Home Town</td>
+    <td> 
+        <select>
+            <optgroup label="UP"><!-- optgroup is used to group the options in the select tag-->
+            <option disabled selected>~~Select~~</option>
+            <option>Kanpur</option>
+            <option>Lucknow</option>
+            <option>Agra</option>
+            </optgroup>
+
+            <optgroup label="Rajasthan">
+            <option>Jaipur</option>
+            <option>Udaipur</option>
+            <option>Kota</option>
+            </optgroup>
+
+            <optgroup label="MP">
+            <option>Patna</option>
+            <option>Bihar</option>
+            <option>Satna</option>
+            <option>Pune</option>
+        </optgroup>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td> University Name</td>
+    <td>
+        <input type="text" list="mylist"/>
+        <datalist id="mylist"><!--Datalist is used to create a list of options that can be selected from the input field.-->
+            <option>AKTU</option>
+            <option>CSJMU</option>
+            <option>HBTU</option>
+            <option>JNU</option>
+            <option>KIIT</option>
+            <option>RAMA</option>
+            <option>CU</option>
+            <option>LU</option>
+        </datalist>   
+    </td>
+</tr>
+
+<tr>
+    <td>
+        SGPA
+    </td>
+    <td> 
+    <input type="number" min="1" max="10" step="0.01" placeholder="Enter SGPA"/>
+    </td>
+</tr>
+
+<tr>
+    <td>Color</td><!--color input is used to select a color from the color picker.-->
+    <td> <input type="color"/></td>
+</tr>
+
+<tr>
+    <td>Range</td><!--range input is used to select a value from a range of values.-->
+    <td> <input type="range" min="99" max="699"/></td>
+</tr>
+
+<tr>
+    <td>Hidden</td><!--hidden input is used to store data that is not visible to the user.-->
+    <td> <input type="hidden" value="EMP1001"/></td>
+</tr>
+
+<tr>
+    <td>Find Something</td>
+    <td> <input type="search"/></td><!--search is used to search something in the input field.-->
+</tr>
+
+<tr>
+    <td>Upload Image</td>
+    <td> <input type="file" accept=".jpg,.pdf" multiple /></td>
+</tr>
+
+<tr>
+    <td>Date and Time</td>
+    <td><input type="datetime-local"/><!-- datetime-local is used to select a date and time from the input field.--> 
+        </td>  
+</tr>
+
+<tr>
+    <td>Month</td>
+    <td> <input type="month"/></td>
+</tr>
+
+<tr>
+    <td>Week</td>
+    <td> <input type="week"/></td>
+</tr>
+
+<tr>
+    <td colspan="2">
+        <input type="submit"/><!--submit input is used to submit the form.-->
+        <input type="reset"/><!--reset input is used to reset the form.-->
+    </td>
+</tr>
+
+</tbody>
+</table>
+</form>
+</body>
+</html>

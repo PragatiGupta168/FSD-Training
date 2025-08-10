@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo14 of JS</title>
+    <script>
+
+        // let arr = [100, 200, 300, 400, 500];
+        // let r = arr.forEach(ele =>{
+        //     console.log(ele);
+        // })
+        // console.log(r);/
+
+        // let arr = [1,2,3,4,5,6];
+        // function myCallBack(ele){
+        //     if(ele%2 ==0)
+        //     return true
+        // }
+        // let r =arr.filter(myCallBack);
+        // console.log(r);
+        
+        //By using Anonymous Function
+        // let arr = [1,2,3,4,5.6,7,8]
+        // let r = arr.filter((ele) =>{
+        //     if(ele%2 ==0)
+        //     return true
+        // })
+        // console.log(r);
+
+        // let arr = [1,2,3,4,5.6,7,8]
+        // let r = arr.filter((ele) => ele%2 == 0)
+        // console.log(r);
+
+        
+        //ASSIGNMENT
+        let cities = [
+            {name: "Kanpur", population:10000},
+            {name: "Kolkata", population:40000},
+            {name: "Delhi", population:7000},
+            {name: "Mumbai", population:15000},
+        ];
+        let r = cities.filter((city) =>{
+            if(city.population > 10000)
+            return true
+        })
+        console.log(r);
+        
+
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

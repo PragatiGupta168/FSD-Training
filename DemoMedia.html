@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query- responsiveness</title>
+    <!-- Css Media Types are all, print and screen-->
+    <!--
+    < 576px       -> Extra Small Device
+      576 to 767  -> Small Devices
+      768 to 991  -> Medium Sized Devices
+      992 to 1199 -> Large Devices
+      1200>=      -> Extra Large Devices 
+    -->
+    <style type="text/css">
+
+        body{
+            background-color: red;
+        }
+
+        @media screen and (orientation: landscape){/* landscape means when height is less than width and portrait means when height is greater than width*/
+            body{
+                background-color: aqua;
+            }
+
+            @media screen and (orientation: portrait) {
+                body{
+                    background-color: navy;
+                }
+                
+            }
+            
+            
+        }
+
+    </style>
+
+</head>
+<body>
+    
+</body>
+</html>

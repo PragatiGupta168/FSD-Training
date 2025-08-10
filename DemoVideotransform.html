@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        h1 {
+            line-height: 90px;
+            background-color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="../101276-video-720.mp4" type="video/mp4" />
+    </video>
+
+    <h1>BackGround Video Demo Page</h1>
+</body>
+</html>

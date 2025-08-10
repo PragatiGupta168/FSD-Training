@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 14-2 of DOM</title>
+    <script>
+
+        let userData = [
+            {uid: 1001, unm:'Sachin', age:42, gender:'Male', dept:'CSE'},
+            {uid: 1002, unm:'Zaheer', age:53, gender:'Male', dept:'MCA'},
+            {uid: 1003, unm:'Sachuu', age:48, gender:'Male', dept:'EC'},
+            {uid: 1004, unm:'Sachin', age:45, gender:'Male', dept:'ME'},
+            {uid: 1005, unm:'Ankita', age:55, gender:'Female', dept:'AIML'}
+        ];
+
+        function fetchData(userId, fn){
+            console.log(`Fetching Data for User Id ${userId}`);
+            return new Promise((res,rej)=>{
+                setTimeout(()=>{
+            let user = userData.find((user)=> {
+                if(user.uid == userId)
+                    return true
+            })
+            if(user){
+            res(user);//Promise Resolved
+        if(fn)
+        fn()
+            }
+        else
+        rej("User Not Found...");//Promise Rejected
+            }, 2000)
+            })        
+    }
+    fetchData(1001).then((data)=>{
+        console.log(data);
+        fetchData(1002).then((data)=>{
+            console.log(data);
+        }).catch((err)=>{
+            console.log(err);
+        })
+    }).catch((err)=>{
+        console.log(err);
+        
+    })
+
+    // //CALLBACK HELL 
+    //     fetchData(1001, ()=>{
+    //     fetchData(1002, ()=>{
+    //         fetchData(1003,()=>{
+    //             fetchData(1004, ()=>{
+    //                 fetchData(1005)
+    //             })
+    //         })
+    //     })
+    //     })
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

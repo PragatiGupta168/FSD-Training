@@ -1,0 +1,192 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Card with using Grid Bootstrap!</title>
+
+    <style>
+        .carousel-item>img {
+            width: 100%;
+            height: 200px;
+        }
+        </style>
+
+</head>
+<body>
+
+    <div class="container-fluid">
+    <nav class="navbar bg-warning navbar-expand-md navbar-light ">
+
+        <a href="#" class="navbar-brand">
+        <img src="./image.jpg" width="80px"/>
+        </a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#myDiv">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="myDiv">
+
+        <ul class="navbar-nav">
+            <li class="nav-item"><a  class ="nav-link" href="#">Link 1</a></li>
+            <li class="nav-item"><a  class ="nav-link" href="#">Link 2</a></li>
+
+
+            <li class="nav-item dropdown"><a  class ="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Link 3</a>
+                <div class="dropdown-menu alert alert-secondary">
+                    <a class= "dropdown-item" href="">SubLink 1</a>
+                    <a class= "dropdown-item" href="">SubLink 2</a>
+                    <a class= "dropdown-item" href="">SubLink 3</a>
+                    <a class= "dropdown-item" href="">SubLink 4</a>
+                </div>
+
+            </li>
+
+
+            <li class="nav-item"><a  class ="nav-link" href="#">Link 4</a></li>
+            <li class="nav-item"><a  class ="nav-link" href="#">Link 5</a></li>
+        </ul>
+
+        </div>
+
+    </nav>
+
+    <div class="carousel slide carousel-fade" data-ride="carousel" id="myCarousel" data-interval="3000" data-pause="false" >
+            <!-- For Images and Caption -->
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="./images.jpg"/>
+                    <div>
+                    <p class="carousel-caption">Image of Night city.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./nature.jpg"/>
+                    <div>
+                    <p class="carousel-caption" >Image of Nature.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./rect.jpeg"/>
+                    <div>
+                    <p class="carousel-caption">Image of Tv.</p>
+                    </div>
+                </div>
+
+            </div>
+<!-- For Previous -->
+            <a href="#myCarousel" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon">
+            </span>
+            </a>
+<!-- For Next -->
+            <a href="#myCarousel" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon">
+            </span>
+            </a>
+
+            <ul class="carousel-indicators">
+                <li data-target="#myCarousel" class="active" data-slide-to="0"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="container mt-2">
+    <div class="row mt-2"  data-aos="fade-up" data-aos-duration="3000">
+        <div class="col-lg-4 col-md-5">
+            <img src="nature.jpg" width="100%"/>
+        </div>
+        <div class="col-lg-8 col-md-7">
+            <p class="alert alert-info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vel at consectetur debitis deleniti dolorem iste, corrupti, voluptas illo quam corporis! Ducimus mollitia non, exercitationem iusto quisquam laboriosam unde dolor dolorum qui aut ipsa officia nihil dignissimos totam pariatur dicta?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus optio temporibus quae aut vero magnam quisquam at officiis! Minus autem ipsam error placeat nam accusantium molestias asperiores, adipisci maxime, inventore aliquam illo magnam ratione illum enim facere. Aliquam, consectetur ipsa.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sint rem consequatur porro, fugit nam eligendi ipsa maiores iure inventore modi consequuntur sequi. At aut aliquid qui, animi rem aspernatur facilis magni impedit obcaecati.
+            </p>
+        </div>
+    </div>
+</div>
+
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card" style="max-width: 300px;" data-aos="zoom-in" data-aos-duration="1000">
+            <img src="./images.jpg" class="card-img-top"/>
+            <div class="body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa assumenda sed aspernatur illo earum nostrum, doloribus recusandae doloremque quos, a, fugiat hic quam enim eum placeat. Ratione, deleniti sapiente ab dicta debitis aliquid ipsum quaerat. Eum quidem recusandae ea officiis?</p>
+                <div class="card-footer">
+                    <button class="btn btn-danger">View Details</button>
+                </div>
+            </div>
+        </div>
+            </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                    <div class="card" style="max-width: 300px;" data-aos="zoom-in" data-aos-duration="1500">
+            <img src="./images.jpg" class="card-img-top"/>
+            <div class="body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa assumenda sed aspernatur illo earum nostrum, doloribus recusandae doloremque quos, a, fugiat hic quam enim eum placeat. Ratione, deleniti sapiente ab dicta debitis aliquid ipsum quaerat. Eum quidem recusandae ea officiis?</p>
+                <div class="card-footer">
+                    <button class="btn btn-danger">View Details</button>
+                </div>
+            </div>
+        </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                    <div class="card" style="max-width: 300px;" data-aos="zoom-in" data-aos-duration="2000">
+            <img src="./images.jpg" class="card-img-top"/>
+            <div class="body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa assumenda sed aspernatur illo earum nostrum, doloribus recusandae doloremque quos, a, fugiat hic quam enim eum placeat. Ratione, deleniti sapiente ab dicta debitis aliquid ipsum quaerat. Eum quidem recusandae ea officiis?</p>
+                <div class="card-footer">
+                    <button class="btn btn-danger">View Details</button>
+                </div>
+            </div>
+        </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                    <div class="card" style="max-width: 300px;" data-aos="zoom-in" data-aos-duration="2500">
+            <img src="./images.jpg" class="card-img-top"/>
+            <div class="body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa assumenda sed aspernatur illo earum nostrum, doloribus recusandae doloremque quos, a, fugiat hic quam enim eum placeat. Ratione, deleniti sapiente ab dicta debitis aliquid ipsum quaerat. Eum quidem recusandae ea officiis?</p>
+                <div class="card-footer">
+                    <button class="btn btn-danger">View Details</button>
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
+
+
+
+<!--Bootstrap is a framework. primary,secondary,info, warning,danger,muted,dark,light,success these are the classes that provide colors-->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

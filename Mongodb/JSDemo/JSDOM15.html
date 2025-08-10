@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document of 15</title>
+    <script>
+        //PROMISE 
+        //Promise alloww you to work with asynchronous code in a more structured way, readable way and they help to avoid callback hell function.
+        //A promise is an object that represnt the eventual completeion of an asynchronous operation and its resulting value/ A peomise can be in one of three States:
+        //PENDING:The initial state; the operation is still ongoing.
+        //FULFILLED: the operation successfully completed, and the promise has a resolved value.
+        //REJECTED:The operation failed, and the promise has a reason for the failure.
+
+        const promise = new Promise((res, rej)=>{
+            let isValid = true;//isme fulfilled hogi
+            if(isValid){
+            res("Data Recieved.....")
+            }
+            else{
+            rej("Error Occurred.....")
+            }
+        })
+
+        // console.log(promise);
+        promise.then((data)=>{
+            console.log(data);
+        }).catch((err)=>{
+            console.log(err);
+        })
+
+        // let isValid = false;//Error occur hogi
+        //     if(isValid){
+        //     resolve("Data Recieved.....")
+        //     }
+        //     else{
+        //     reject("Error Occurred.....")
+        //     }
+        // })
+        // console.log(promise);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

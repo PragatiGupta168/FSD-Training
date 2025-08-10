@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo6 Of JS</title>
+    <script>
+
+        // FUNCTIONS ARE FIRST CLASS CITIZENS IN JAVASCRIPT.    
+
+        // function myfun(){
+        //     console.log("Function is called");
+        // }
+        // myfun(); // Function is called, because the function is hoisted to the top of the scope.
+
+        // function calc_int(amt, rate, time){
+        //     return (amt * rate * time) / 100;
+        // }
+        // let r = calc_int(5000, 10, 1);//when we initialize the value then it will give the output but if we dont initialize the value then it will give undefined or NaN.
+        // console.log(r); // undefined, because the function is called before it is defined.
+
+        // function calc_int(amt, rate, time=1){//time=1 is a default value argument, if the user does not provide a value for time, it will default to 1.
+        //     return (amt * rate * time) / 100;
+        // }
+        // let r = calc_int(5000, 10);
+        // console.log(r);
+
+        // function calc_int(amt, rate, time=1){//time=1 is a default value argument, if the user does not provide a value for time, it will default to 1.
+        //     return (amt * rate * time) / 100;
+        // }
+        // let r = calc_int(5000, 10, 5);// It is overriding the default value of time, so it will use the value provided by the user.
+        // console.log(r);
+
+        // function calc_int(amt=1000, rate, time=1){//It is technically wrong because we dont specify any value in between two fields
+        //     return (amt * rate * time) / 100;
+        // }
+        // let r = calc_int(10);
+        // console.log(r);
+
+        // function mySum(a,b){
+        //     return(a+b)
+        // }
+
+        // let r = mySum(10,20)
+        // console.log(r);
+
+        // function mySum(a,b,...c){//Where ...c are rest parameters and their type is array
+        //     console.log(a,b,c);
+
+        //     return(a+b)
+        // }
+
+        // let r = mySum(10,20,30,40,50);
+        // console.log(r);
+
+        // function mySum(...c,a,b){//It gives error for rest parameter must be last formal parameter
+        //     console.log(a,b,c);
+
+        //     return(a+b)
+        // }
+
+        // let r = mySum(10,20,30,40,50);
+        // console.log(r);
+
+        
+        // function mySum(...c){
+        //     let sum = 0;
+        //     for(let ele of c)
+        //     sum += ele;
+        //     return(sum)
+        // }
+        // let r = mySum(10,30);
+        // console.log(r);
+
+        // r = mySum(10,20,30,40,50);
+        // console.log(r)
+
+        // r = mySum(90,10);
+        // console.log(r);
+
+        // function myfun(){
+        //     console.log("Myfun is calling...");
+        // }
+        // console.log(myfun);let fn = myfun;
+        // fn();
+        
+
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

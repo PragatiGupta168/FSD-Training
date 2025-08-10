@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+        body{
+            background-color: navy;
+        }
+
+        /*@media screen and (width:800px) {
+            body{
+                background-color: red;
+            }
+            
+        }*/
+
+        /*Extra Large Device */
+        @media screen and (min-width:1200px){
+            body{
+                background-color: rebeccapurple;
+            }
+            body::after{
+                content: "Extra Large Devices";
+                text-align: center;
+                color: white;
+            }
+            }
+
+            @media screen  and (min-width:992px) and (max-width:1199px){
+                body{
+                    background-color: goldenrod;
+                }  
+                body::after{
+                    content:"Large Devices";
+                    text-align: center;
+                    color: black;
+                }
+            }
+
+            
+            @media screen  and (min-width:767px) and (max-width:991px){
+                body::after{
+                    background-color: lightgoldenrodyellow;
+                }  
+                body::after{
+                    content:"Medium Devices";
+                    text-align: center;
+                    color: black;
+                }
+            }
+
+            
+            @media screen  and (min-width:576px) and (max-width:767px){
+                body{
+                    background-color: yellow;
+                } 
+                body::after{
+                    content:"Small Devices";
+                    text-align: center;
+                    color: black;
+                }
+            }
+
+            
+            @media screen  and (max-width:576px){
+                body{
+                    background-color: grey;
+                } 
+                body::after{
+                    content:"Small Devices";
+                    text-align: center;
+                    color: black;
+                }      
+            }
+
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo3 of JS</title>
+    <script>
+
+        // console.log(v);//undefined, because v is not defined yet and their behavior is  technically wrong.
+        // var v;
+
+        //what is hoisting?
+        //Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope during the compile phase.
+        //TDZ (Temporal Dead Zone) is the time between the start of the block and the declaration of the variable.
+        //In the TDZ, if you try to access the variable, it will throw a ReferenceError.
+        //In the case of var, it is hoisted to the top of the function or global scope, but it is not initialized until the line where it is declared is executed.
+
+        // let v;
+        // console.log(v); //undefined, because v is declared but not initialized
+        
+        // var v = 10;
+        // console.log(v);//10, because v is declared and initialized
+
+        // console.log(v);
+        // let v = 10;
+        // console.log(v);//It is a ReferenceError, because v is in TDZ (Temporal Dead Zone) until it is declared.
+        
+        // {
+        //     var v = 10; // var is function scoped or globally scoped
+        //     console.log(v); // 10
+        // }
+
+        // {
+        //     let v = 10; // let is block scoped
+        // }
+        // console.log(v);//It Gives a ReferenceError, because v is not defined in this scope.
+
+        // const num;
+        // console.log(num); // It will throw a SyntaxError, because const variables must be initialized at the time of declaration.
+
+        // const num = 10;
+        // console.log(num); // 10, because num is declared and initialized
+
+        // const num = "Amit";
+        // console.log(num); // "Amit", because num is declared and initialized
+
+        // const num = "Amit";
+        // console.log(num * 5) == NaN; // "Amit", because num is declared and initialized
+        // console.log(NaN == NaN); // false, because NaN is not equal to anything, not even itself
+        // console.log(isNaN(NaN)); // true, because isNaN checks if the value is NaN
+        // console.log(isNaN("Amit")); // true, because "Amit" is not a number
+        // console.log(isNaN(num * 5)); // true, because "Amit" is not a number and num * 5 is NaN
+
+        // let num = 5n;
+        // console.log(num, typeof num); // 5 number
+
+        // let a = 5, b = 6, c = 7;
+        // let result = (a + 7) = (b - 3) = (c + 4);//Left-hand side of an assignment must be a variable or a property access, not an expression
+        // console.log(result); // It will throw a TypeError, because you cannot assign a value to a non-variable expression.
+
+        let a ="5", b = 5;
+        console.log(a == b);// true, because == checks for value equality and converts types if necessary
+        console.log(a === b); // false, because === checks for both value and type
+        
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

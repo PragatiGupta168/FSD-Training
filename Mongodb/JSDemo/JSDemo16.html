@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo16 of js</title>
+    <script>
+
+        let arr = [4,3,9,1,5,8];//For Numeric values
+        arr.sort();
+        console.log(arr);
+
+        // let arr2 = [9,2, ...arr];
+        // console.log(arr2);
+
+        let names = ["Amit", "Rahul","Virat", "zaheer","yuvraj","kaif"];//For String values
+        names.sort()
+        console.log(names);
+
+        let arr3 = [4,3,19,1,25,8];
+        arr3.sort((a, b)=>{
+            // console.log(a,b);
+            return (a - b);//ascending order
+        })
+        console.log(arr3);
+
+        let arr4 = [4,3,19,1,25,8];
+        arr4.sort((a, b)=>{
+            // console.log(a,b);
+            return (b - a);//descending order
+        })
+        console.log(arr4);
+
+         //SPREAD OPERATOR
+
+        //Assignment
+
+        // let userData = [
+        //     {uid: 1004, unm:'Sachin', age:45},
+        //     {uid: 1002, unm:'Zaheer', age:55},
+        //     {uid: 1003, unm:'Sachuu', age:48},
+        //     {uid: 1005, unm:'Kaif', age:43}
+        // ];
+        // userData.sort()
+        // console.log(userData);
+
+        // let uid =[1004,1002,1003,1005];
+        // uid.sort()
+        // console.log(uid);
+
+        // let unm =['Sachin', 'Zaheer','Sachuu','Kaif'];
+        // unm.sort()
+        // console.log(unm);
+
+        // let age =[45,55,48,43];
+        // age.sort()
+        // console.log(age);
+        
+         //SPREAD OPERATOR
+        
+        let userData = [
+            {uid: 1004, unm:'Sachin', age:45},
+            {uid: 1002, unm:'Zaheer', age:55},
+            {uid: 1003, unm:'Sachuu', age:48},
+            {uid: 1005, unm:'Kaif', age:43}
+        ];
+        //Sort ID
+        let r =[...userData].sort((a,b)=>{
+            return(a.uid - b.uid)
+        })
+        console.log(r);
+
+        //Sort Name
+        let r1 = [...userData].sort((a,b)=>{
+            return(a.unm.localeCompare(b.unm))
+        })
+        console.log(r1);
+
+        //Sort Age
+        let r2 = [...userData].sort((a,b)=>{
+            return(a.age - b.age)
+        })
+        console.log(r2);
+
+        
+        
+        
+        
+        
+                
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

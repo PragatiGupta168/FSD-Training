@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 16 of DOM</title>
+    <script>
+
+        let userData = [
+            {uid: 1001, unm:'Sachin', age:42, gender:'Male', dept:'CSE'},
+            {uid: 1002, unm:'Zaheer', age:53, gender:'Male', dept:'MCA'},
+            {uid: 1003, unm:'Sachuu', age:48, gender:'Male', dept:'EC'},
+            {uid: 1004, unm:'Sachin', age:45, gender:'Male', dept:'ME'},
+            {uid: 1005, unm:'Ankita', age:55, gender:'Female', dept:'AIML'}
+        ];
+
+        function fetchData(userId, fn){
+            console.log(`Fetching Data for User Id ${userId}`);
+            return new Promise((res,rej)=>{
+                setTimeout(()=>{
+            let user = userData.find((user)=> {
+                if(user.uid == userId)
+                    return true
+            })
+            if(user){
+            res(user);//Promise Resolved
+        if(fn)
+        fn()
+            }
+        else
+        rej("User Not Found...");//Promise Rejected
+            }, 2000)
+            })        
+        }
+
+        //IT IS VERY EASY, NEAT AND CLEAR AS COMPARED TO CALLBACK HELL AND  PROMISE FUNCTION 
+
+        // async function fetchAllData(){
+        //     let data = await fetchData(1001);
+        //     console.log(data);
+
+        //     data = await fetchData(1002);
+        //     console.log(data);
+
+        //     data = await fetchData(1003);
+        //     console.log(data);
+
+        //     data = await fetchData(1004);
+        //     console.log(data);
+
+        //     data = await fetchData(1005);
+        //     console.log(data);
+            
+            
+        // }
+        // fetchAllData()
+
+        //IN REJECTED CASE WE USE TRY AND CATCH BLOCK 
+            async function fetchAllData(){
+            try{
+            let data = await fetchData(1001);
+            console.log(data);
+
+            data = await fetchData(1002);
+            console.log(data);
+
+            data = await fetchData(1003);
+            console.log(data);
+
+            data = await fetchData(1004);
+            console.log(data);
+
+            data = await fetchData(1005);
+            console.log(data);
+        }
+        catch {
+            console.log("Error Occurred");
+        }
+        fetchAllData()
+        }
+
+        //Async function show promise and promise is handle by then and catch
+        // async function myFun(){
+        //     console.log("Hi....");
+        //     await console.log("My Fun Calling....");
+        //     console.log("Bye");
+        // }
+
+        // const r = myFun();
+        // console.log(r);
+        
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

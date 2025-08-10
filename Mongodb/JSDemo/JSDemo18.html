@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo18 of js</title>
+    <script>
+        let carts = [
+            {proName:'SmartWatch', priceDollar:499},
+            {proName:'SmartWatch', priceDollar:499},
+            {proName:'SmartWatch', priceDollar:499},
+        ];
+        let tot_price = carts.reduce((tprice, ele)=>tprice + ele.priceDollar, 0)
+        console.log(tot_price);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

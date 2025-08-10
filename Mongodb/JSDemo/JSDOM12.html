@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 12</title>
+    <script></script>
+</head>
+<body>
+    <div id="myDiv">
+    <h1 id="h1">Heading 1</h1>
+    <h1>Heading 2</h1>
+    <!-- <h1>Heading 3</h1>
+    <h1>Heading 4</h1>
+    <h1>Heading 5</h1>
+
+    <p class="clsA">Lorem ipsum dolor sit amet consectetur, 
+    adipisicing elit. Quasi ullam aperiam doloribus sed aut eos saepe quo eveniet, quae odit laudantium, 
+    et voluptas officia quia amet ab voluptate, cum minus.</p>
+
+    <h1>Heading 6</h1> -->
+
+    <button id="mybtn">Button</button>
+    </div>
+    
+</body>
+
+<script>
+
+    document.getElementById('mybtn').addEventListener('click', ()=>{
+        // let h1List = document.getElementsByTagName('h1');
+        // console.log(h1List);
+        
+        // let h1Ele = document.querySelector('h1')//this h1 ki treated as tag name because it is assigned by h1
+        // let h1Ele = document.querySelector('#h1')//id k liye hum # ka use karnge
+        // console.log(h1Ele);
+
+        // let h1Ele = document.querySelectorAll('h1')
+        // console.log(h1Ele);
+
+        // let ele = document.querySelector('.clsA')
+        // let ele = document.querySelector('h1:nth-child(2)')
+        // console.log(ele);
+
+        // let h1Ele = document.querySelectorAll('p+h1')//By using combinators
+        // console.log(h1Ele);
+
+        let ele = document.querySelector('#myDiv');
+        console.log(ele);
+        console.log(ele.parentNode);
+        console.log(ele.parentElement);
+        console.log(ele.children);
+        console.log(ele.childNodes);
+        console.log(ele.nextElementSibling);
+    })
+
+</script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        h1{
+            text-align: center;
+            background-color: #ddd;
+            line-height: 80px;
+
+        }
+        .container{
+            border: 2px solid red;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            position: relative;
+        }
+
+        .container div{
+            border:2px solid navy ;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+        }
+
+        #d1{
+            position: static;/*static is the default value. The element will be positioned according to normal flow of document.*/
+            top: 100px;
+            left: 100px;
+        }
+
+        #d2{
+            position: relative;/* relative is used to position the element relative to its normal position.*/
+            top: 50px;
+            left: 50px;
+
+        }
+
+        #d3{
+            position: absolute;/*absolute is used to position the element relative to its nearest positioned ancestor.If there is no positioned ancestor it will be positioned relative to the initial containing bloack.*/
+            top: 70px;
+            left: 70px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+    <div>Div 1</div>
+    <div style="background-color: #ddd; visibility: hidden;">Div 2</div>< display: none is used to hide the element compleltely. display:block is used to make the element as block level element. 
+    visibility:hidden is used to hide the element but it will take the space of the element.
+    <div>Div 3</div>
+-->
+    <h1>POSITIONED FOUR TYPES</h1>
+    <div class="container">
+
+    <div id="d1" style="background-color: aqua;">div 1</div>
+    <div id="d2" style="background-color: yellow;">div 2</div>
+    <div id="d3" style="background-color: aqua;">div 3</div>
+    <div style="background-color: yellow;">div 4</div>
+    </div>
+
+</body>
+</html>

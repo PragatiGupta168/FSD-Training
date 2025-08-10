@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo8 of js</title>
+    <script>
+        // ANONYMOUS FUNCTION
+        // An anonymous function is a function without a name.
+        // Why are Anonymous Functions Used in JavaScript?
+        // 1. For Callbacks
+        // When you want to pass a function as an argument to another function.
+        // 2.IIFE (Immediately Invoked Function Expression)
+        // When you want a function to run immediately after defining it:
+
+        (function()
+        {
+            console.log("Anonymous function");
+        })();
+
+        (function(a,b)
+        {
+            console.log("Anonymous function", (a+b));
+        })(10,20);
+
+        let result =(function(num)
+        {
+            return num**2;
+        })(6);
+        console.log(result);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

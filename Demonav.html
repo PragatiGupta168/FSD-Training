@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <style type="text/css">
+
+        .container{
+            display: flex;
+            text-align: center;
+            gap: 3px;
+            flex-wrap: wrap;
+            font-size: x-large;
+        }
+
+        .container>*
+        {
+            border: 1px solid black ;
+            padding: 20px;
+            border-radius: 5px;
+            flex: 1 1 100%;
+            
+
+        } 
+
+        .container>header
+        {
+            line-height: 100px;
+            background-color: rgb(212, 109, 159);
+            color: rgb(6, 27, 46);
+        }
+
+        .container>nav
+        {
+            line-height: 50px;
+            background-color: rgb(147, 209, 183);
+            color: rgb(6, 27, 46);
+        }
+
+        .container>article
+        {
+            line-height: 40px;
+            background-color: rgb(174, 131, 214);
+            color: rgb(6, 27, 46);
+        }
+
+        .container>aside
+        {
+            background-color: rgb(102, 191, 195);
+            color: rgb(6, 27, 46);
+        }
+
+        .container>footer
+        {
+            background-color: rgb(202, 162, 133);
+            color: rgb(6, 27, 46);
+        }
+
+        @media screen and (min-width:992px) {
+            .mainContent
+            {
+                order: 2;
+                flex: 3 3 0%;
+                height: 500px;
+            }
+
+            .aside1
+            {
+                order: 1;
+                flex: 1 1 0%; /*iska means initial size kuch nhi */
+            }
+
+            .aside2
+            {
+                order: 3;
+                flex: 1 1 0%;
+            }
+
+            .container>footer
+            {
+                order: 4;
+            }
+        }
+
+        @media screen and (min-width:768px) and (max-width:991px) {
+
+            .mainContent
+            {
+                height: 500px;
+            }
+            .aside1{
+                flex: 1 1 0%;
+            }
+            
+            .aside2{
+                flex: 1 1 0%;
+            }
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            My Header
+        </header>
+
+        <nav>
+            My Navigation
+        </nav>
+
+        <article class="mainContent">
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt distinctio error cum dolore consectetur magni ratione,
+            praesentium tenetur, tempore deserunt impedit similique sit doloremque exercitationem ipsam possimus quia nemo nulla!
+            </p>
+
+        </article>
+
+    <aside class="aside1">
+        Aside 1
+    </aside>
+
+    <aside class="aside2">
+        Aside 2
+    </aside>
+
+    <footer>
+        My Footer
+    </footer>
+
+    </div>
+
+
+</body>
+</html>

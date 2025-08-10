@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo9 of JS</title>
+    <script>
+
+        // function outerfun()
+        // {
+        //     console.log("Outer Fun")
+        //     function innerFun(){
+        //         console.log("InnerFun...")
+        //     }
+        //     innerFun();
+        // }
+        // outerfun();
+
+        // function outerfun()
+        // {
+        //     console.log("Outer Fun")
+        //     function innerFun(){
+        //         console.log("InnerFun...")
+        //     }
+        //     return innerFun;
+        // }
+
+        // let fn =outerfun();
+        // console.log(fn);
+        // fn();
+        
+
+        // function myfun(name){
+        //     console.log("myfun");
+        //     function yourfun(msg){
+        //         console.log("yourfun..");
+        //         console.log(msg,name);
+        //     }
+        //     return yourfun;
+        // }
+        // let fn = myfun("Pragati");
+        // console.log(fn);
+        // fn("Don hai...");
+
+
+    //This is known as function-calling stack
+        function myfun(name){
+            console.log("myfun");
+            function yourfun(msg){
+                console.log("yourfun..");
+                console.log(name,msg);
+            }
+            return yourfun;
+        }
+        let fn = myfun("Pragati");
+        console.log(fn);
+        fn("college gayi hai...");
+
+        //const nm = "Amit"//
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

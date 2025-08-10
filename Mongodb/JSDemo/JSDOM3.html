@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoM3</title>
+    <script src="https://kit.fontawesome.com/719a8e2e0e.js" crossorigin="anonymous"></script>
+    <style>
+
+    </style>
+
+    <script>
+        function myfun(){
+            // alert('hi...')
+            const ele = document.getElementById('pwd');
+            ele.type = (ele.type === 'password') ? 'text':'password';
+
+            const btn = document.getElementById('myBtn');
+            let lst = btn.classList;
+            if(lst.contains('fa-eye')){
+                lst.replace('fa-eye', 'fa-eye-slash')
+            }
+            else{
+                lst.replace('fa-eye-slash', 'fa-eye')
+            }
+            // btn.textContent = (btn.textContent.trim() === 'Show')? 'Show' : 'Hide'
+            
+            // console.log(ele);
+            // console.log(ele.value);
+            // console.log(ele.value.length);
+            // console.log(ele.type);
+            // console.log(ele.placeholder);//by using this we read the value of  placeholder.
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <input type="password" id="pwd" placeholder="Eg:hp@123"/>
+
+    <buttontype="button" id="myBtn"class="fa-solid fa-eye"></button>
+    <!-- <i class="fa-solid fa-eye"></i> -->
+
+</body>
+<script>
+
+    const btn = document.getElementById('myBtn');
+    // console.log(btn);
+
+    // btn.addEventListener('click', ()=>{
+    //     alert('Hello...');
+    // }) //by using callback function jab event occur hoga tb yh function call hoga
+
+    btn.addEventListener('click', myfun);
+
+</script>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 11</title>
+</head>
+<body>
+<!-- Gender radio buttons -->
+<label>
+<input type="radio" name="gender" value="Male" />
+Male
+</label>
+<label>
+<input type="radio" name="gender" value="Female" />
+Female
+</label>
+<br />
+
+<!-- Button -->
+<button id="myBtn">Button</button>
+<br /><br />
+
+<!-- Hobbies checkboxes -->
+<label>
+<input type="checkbox" name="hobbies" value="swim" />
+Swimming
+</label>
+<label>
+<input type="checkbox" name="hobbies" value="Travel" />
+Travelling
+</label>
+<label>
+<input type="checkbox" name="hobbies" value="Race" />
+Racing
+</label>
+<label>
+<input type="checkbox" name="hobbies" value="swing" />
+Swinging
+</label>
+<br /><br />
+
+<!-- Second Button -->
+<button id="myBtn2">Button</button>
+
+    <button id="myBtn3"> Select All </button>
+
+</body>
+<script>
+
+
+    let isChecked = false 
+    document.getElementById('myBtn3').addEventListener('click', ()=>{
+    const checkboxLst = document.getElementsByName('hobbies');
+        // checkboxLst.forEach((chk)=>{
+        //     if(chk.checked)
+        //     chk.checked = false
+        // else 
+        // chk.checked = true
+        // })
+        if(isChecked){
+        checkboxLst.forEach((chk)=>chk.checked=false)
+        }
+        else{
+            checkboxLst.forEach((chk)=>chk.checked=true)
+        }
+        isChecked = !isChecked
+    })
+
+    document.getElementById('myBtn2').addEventListener('click', ()=>{
+        const checkboxLst = document.getElementsByName('hobbies');
+        checkboxLst.forEach((chk)=>{
+            if(chk.checked)
+            console.log(chk.value);
+            
+        })
+    })
+    
+    document.getElementById('myBtn').addEventListener('click', ()=>{
+        // alert('hi...')
+        const radioLst = document.getElementsByName('gender');
+        console.log(radioLst);
+        radioLst.forEach((radio)=>{
+
+            // console.log(radio.value);
+            // console.log(radio.checked);
+
+            if(radio.checked)
+            console.log(radio.value);       
+        })
+    })
+</script>
+</html>

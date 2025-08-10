@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+        p:not(#p2){ /* not() pseudo class */
+            background-color: black;
+            color: aliceblue;
+            padding: 20px;
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        /* pseudo elements are false elements because they don't have their own Html Tags.*/
+        /* ::before pseudo element can be used to insert some content before the content of an element. for eg div::before*/
+
+        #p1::before{ 
+            /*content: "My";*/
+            content: url(btn.png);
+            position: relative;
+            left: -100px;
+        }
+
+        #p1::after{ 
+            content: "After";
+        }
+
+    </style>
+</head>
+<body>
+
+    <p id="p1">ParaGraph 1</p>
+    <p id="p2">ParaGraph 2</p>
+    <p id="p3">ParaGraph 3</p>
+
+</body>
+</html>

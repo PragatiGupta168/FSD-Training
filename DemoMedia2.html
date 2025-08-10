@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+        /* Flex-box is a 1-D layout method for arranging items in rows or columns.*/
+        /* Flex-box direction means it sets how flex items are placed in the flex container , along whixh axis and direction are flex-direction: row(default), column(default),row reverse, column reverse.*/
+
+        .container{
+            height: 600px;
+            width: 700px;
+            border: 1px solid;
+            display: flex;
+            flex-direction: row;/*default*/
+
+            /*flex-direction: row-reverse;row-reverse*/
+            /*flex-direction: column;*/
+            /*flex-direction: column-reverse;*/
+            /*align-items: center;*/
+
+            align-content: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+
+        /*flex-wrap means specify property whether the flex items should wrap or not. Syntax are wrap , nowrap and wrap-reverse.*/
+        /*flex-flow property is a shorthand property for setting both the flex-direction and flex-wrap properties syntax: flex-flow: row-wrap;*/
+        /* justify-content means alignment along the main(x)axis are as flex-start,flex-end,center,space-evenly,space-around,space-between*/
+        /* align-items means alignment along the cross(y) axis are as flex-start,flex-end,center and stretch*/
+        /*align-content means alignment of space between and around the content along cross axis, works with Flex-wrap:wrap, flex-start,flex-end,center,space-around,space-between*/
+
+
+        .container>div{
+            width: 200px;
+            height: 100px;
+            text-align: center;
+
+        }
+
+        .container>div:nth-child(odd){
+            background-color: aqua;
+        }
+
+        .container>div:nth-child(even){
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- div.container>div#myDiv${Div $}*5 -->
+    
+    <div class="container">
+        <div id="myDiv1">Div 1</div>
+        <div id="myDiv2">Div 2</div>
+        <div id="myDiv3">Div 3</div>
+        <div id="myDiv4">Div 4</div>
+        <div id="myDiv5">Div 5</div>
+        <div id="myDiv6">Div 6</div>
+        <div id="myDiv7">Div 7</div>
+        <div id="myDiv8">Div 8</div>
+        <div id="myDiv9">Div 9</div>
+    </div>
+
+</body>
+</html>

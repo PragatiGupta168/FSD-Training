@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo2 of JS</title>
+    <script>
+        let a=5;
+        let b="5";
+
+        console.log(a + b); // 55, because it concatenates string and number
+        console.log(a - b); // 0, because it converts string to number
+        console.log(a * b); // 25, because it converts string to number
+        console.log(a / b); // 1, because it converts string to number
+        console.log(a + (a>b)); //(5 + false) => 5, because false is converted to 0
+        console.log(a + (a == b)); // (5 + true) => 6, because true is converted to 1
+        console.log(b + (a == b)); //("5" + true) 
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

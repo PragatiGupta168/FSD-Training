@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 9</title>
+    <style>
+
+    </style>
+    
+</head>
+<body>
+    <div id="tabContainer">
+    </div>
+    <button id="myBtn">Button1</button>
+    
+</body>
+<script>
+
+    let userData =[
+        {uid: 1004, unm: 'Sachin', age: 55, gender: 'Male', dept: 'CSE'},
+        {uid: 1002, unm: 'Rahul', age: 45 , gender: 'Male', dept: 'ME'},
+        {uid: 1003, unm: 'Virat', age: 48 , gender: 'Male', dept: 'EC'},
+        {uid: 1005, unm: 'Mahi', age: 43  , gender: 'Male', dept: 'AIML'},
+        {uid: 1006, unm: 'Shreyas', age: 50  , gender: 'Male', dept: 'CSE'}
+    ]
+
+    sortCols = {}
+
+    function createTable(data){
+          //alert('hi...'+ data);
+
+          //Table Creation and set Attributes
+        const myTable = document.createElement("table");
+        myTable.setAttribute('border', '2px')
+        myTable.setAttribute('width', '500px')
+        myTable.setAttribute('align', 'center')
+        myTable.setAttribute('bgcolor', '#ddd')
+
+            //table Head Creation
+        const thead = document.createElement("thead");
+        const row = thead.insertRow();
+
+          //Read Fields Names from object
+        const keys = Object.keys(data[0])
+        //   console.log(keys);
+
+            // Create headings using key(fields Names)
+            keys.forEach((key) => {
+            let colhead = document.createElement('th');
+            colhead.textContent = key.toUpperCase()
+            colhead.style.backgroundColor='black'
+            colhead.style.color='white'
+            colhead.style.cursor='pointer'
+            colhead.addEventListener('click', ()=>{
+
+            sortCols[key] = !sortCols[key]
+            //sortCols[unm] = true
+            console.log(sortCols)
+                    const sortedData = [...userData].sort((a, b)=>{
+                    if(typeof a[key] === 'number')
+                    return sortCols[key] ? a[key] - b[key] : b[key] - a[key]
+                    else if(typeof a[key] === 'string')
+                    return sortCols[key] ? a[key].localeCompare(b[key]) : b[key].localeCompare(a[key])
+
+                })
+                console.log(sortedData);
+                const tab = document.getElementById('tabContainer')
+                tab.innerHTML = ""
+                tab.append(createTable(sortedData))
+            })
+            row.append(colhead);
+        })
+
+          //Append head into Table
+        myTable.append(thead);
+          //Creation of Table Body
+        let tbody = document.createElement('tbody')
+          //Add use data into table rows from each object
+        data.forEach((user)=>{
+            let row = tbody.insertRow()
+            const values = Object.values(user)
+
+            values.forEach((val) => {
+
+            let col = row.insertCell();
+            col.textContent = val
+
+            })
+            tbody.append(row)
+
+        })
+
+        myTable.append(tbody);
+        return myTable;
+          //console.log(myTable);
+    }
+
+    const btnEle = document.getElementById('myBtn')
+    btnEle.addEventListener('click', ()=>{
+        const tab = document.getElementById('tabContainer')
+        tab.append(createTable(userData));  
+    })
+
+</script>
+
+
+
+</html>

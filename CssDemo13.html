@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+        /*tbody > tr:first-child{
+            background-color: aqua;
+        }
+
+        tbody>tr:last-child{
+            background-color: yellow;
+        }*/
+
+        /*tbody>tr:nth-child(odd){
+            background-color: yellow;
+            color: aliceblue;
+        }
+
+        tbody>tr:nth-child(even){
+            background-color: dodgerblue;
+            color: aliceblue;
+        }*/
+
+        /*tbody>tr:nth-child(2n+1){
+            background-color: aquamarine;
+            color: whitesmoke;
+        }*/
+
+        tbody>tr :nth-child(odd){/*descedant selector thats why columns are colored*/
+            background-color: aquamarine;
+            color: whitesmoke;
+        }
+
+        
+
+
+        </style>
+</head>
+<body>
+        <table border = "1px" width="600px" align="center" bgcolor="#ddd" cellpadding="10px" cellspacing="0"> <!--cell spacing = 0
+        used for single line --> 
+        <thead>
+            
+            <tr align="center">
+                <th> EmpID</th>
+                <th>EmpName
+                </th>
+                <th> EmpEmail</th>
+                <th>EmpGender</th>
+                <th>Empno.</th>
+                <th>EmpSalary</th>
+            </tr>
+        </thead>
+   
+            <tr>
+                <td>Emp1001</td>
+                <td>Krishna</td>
+                <td>krishna@gmail.com</td>
+                <td>Male</td>
+                <td>47</td>
+                <td>5000</td>
+            </tr>
+       
+            <tr>
+                <td>Emp1001</td>
+                <td>Krishna</td>
+                <td>krishna@gmail.com</td>
+                <td>Male</td>
+                <td>47</td>
+                <td>&dollar;5000</td>
+                </tr>
+                </tbody>
+                
+           
+            <tr>
+                <td>Emp1001</td>
+                <td>Krishna</td>
+                <td>krishna@gmail.com</td>
+                <td>Male</td>
+                <td>47</td>
+                <td>&#8377;5000</td>
+            </tr>
+        
+             <tr>
+                <td>Emp1001</td>
+                <td>Krishna</td>
+                <td>krishna@gmail.com</td>
+                <td>Male</td>
+                <td>47</td>
+                <td>&#8377;5000</td>
+            </tr>
+
+            
+            <tr>
+                <td>Emp1001</td>
+                <td>Krishna</td>
+                <td>krishna@gmail.com</td>
+                <td>Male</td>
+                <td>47</td>
+                <td>5000</td>
+            </tr>
+
+            <tr>
+                <td>Emp1001</td>
+                <td>Krishna</td>
+                <td>krishna@gmail.com</td>
+                <td>Male</td>
+                <td>47</td>
+                <td>5000</td>
+            </tr>
+            </tbody>
+
+</body>
+</html>

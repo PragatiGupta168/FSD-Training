@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom4</title>
+    <style>
+
+    </style>
+
+    <script>
+
+    </script>
+
+</head>
+
+<body>
+
+    <button type="button" id="myBtn">Button 1</button>
+    <button type="button" id="myBtn2">Button 2</button>
+    <div id="myDiv" style="border: 1px solid navy"> DIV </div>
+    
+</body>
+
+<script>
+
+    const btn2 = document.getElementById('myBtn2');
+    btn2.addEventListener('click', ()=>{
+    const inpEle = document.createElement('input');
+    inpEle.setAttribute('type','date')
+    inpEle.setAttribute('name','dateOfBirth')
+    inpEle.setAttribute('place','kanpur')
+    // console.log(inpEle);
+
+    let eleDiv = document.getElementById('myDiv');
+    eleDiv.append(inpEle);
+    
+    });
+
+    const btn = document.getElementById('myBtn');
+    btn.addEventListener('click', function(){
+    const myH = document.createElement('h1');
+    myH.textContent = "My First Dynamic Heading";
+    myH.style.color = 'red'
+    console.log(myH);
+
+    //document.body.append(myH);//append means button ke bad 
+    document.body.prepend(myH);//prepend means button kr phele
+
+    })
+
+</script>
+</html>

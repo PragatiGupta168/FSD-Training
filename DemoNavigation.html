@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <style>
+        .mynav {
+            display: flex;
+            align-items: center;
+            background-color: navy;
+            padding: 10px;
+            justify-content: space-between;
+        }
+
+        .mynav > img {
+            height: auto;
+            width: 100px;
+        }
+
+        .mynav > ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .mynav > ul > li {
+            margin-right: 10px;
+        }
+
+        .mynav > ul > li > a {
+            text-decoration: none;
+            padding: 15px 30px;
+            color: white;
+            display: block;
+        }
+
+        @media screen and (min-width:768px) and (max-width:991px) {
+            .mynav{
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width:767px){
+            .mynav{
+                flex-direction: column;
+            }
+            .mynav>ul{
+                flex-direction: column;
+            }
+            .mynav>img{
+                display: none;
+            }
+            .mynav>ul>li>a{
+                border-bottom: 1px solid white;
+            }
+
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <nav class="mynav">
+        <img src="./btn.png" alt="image"/>
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+            <li><a href="#">Link 5</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

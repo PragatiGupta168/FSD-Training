@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM (Document Object Model)</title>
+    <script>
+//The dom is an application programmming interface(api) for manipulating HTML documents .Dom is cross-platform, and language-independent ways of 
+//manipulating HTML and XML documents.The Dom represnts an html document as a tree of nodes . The dom provides functions that allow you to add, remove and 
+//modify pasrts of the document effectively.
+
+    // function myfun(){
+    //     alert('Hi...')
+    // }
+
+    function myfun(){
+        const ele = document.getElementById('myH');
+        // console.log(ele);
+        // console.log(ele.textContent);
+        // ele.textContent = "Hello World!...";
+        // // console.log(ele.innerText);
+        // // console.log(ele.innerHTML);
+        // const pEle = document.getElementById("myP");
+        // pEle.textContent = ele.textContent;
+
+        //FOR ADDING CSS
+        //
+        ele.style.backgroundColor = 'red';
+        ele.style.color = 'white';
+        ele.style.textAlign = 'center';
+        ele.style.padding = '20px 50px';
+        ele.style.border = '1px solid black';
+    }
+    
+
+
+
+    
+    
+    </script>
+</head>
+<body>
+    <h1 id="myH">Heading 1</h1>
+    <p id="myP">
+    
+    </p>
+
+    <button type="button" onclick="myfun()">Button</button>
+</body>
+</html>
