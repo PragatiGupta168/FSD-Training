@@ -59,21 +59,36 @@ const showUsers = async function (req,res) {
     res.status(200).json(userData)   //13-aug
 }
 
-const editUser = async function (req,res) {
+// const editUser = async function (req,res) {
 
-    if(req.method === 'POST'){
-        const updUser = await UserModel.findByIdAndUpdate(req.params.id, { userName: req.fields.unm, password:req.fields.pwd, emailId:req.fields.mailId},{new: true})
+//     if(req.method === 'POST'){
+//         const updUser = await UserModel.findByIdAndUpdate(req.params.id, { userName: req.fields.unm, password:req.fields.pwd, emailId:req.fields.mailId},{new: true})
+//         if(updUser)
+//                 res.render('adminViews/editUser',{userData: updUser, msg: "User Updated Successfully..."})
+//     }
+//     else
+//         {
+//     const userData = await UserModel.findOne({_id: req.params.id})
+//     // console.log(userData);
+//     res.render('adminViews/editUser',{userData, msg:null})
+//     }
+// }
+
+const editUser = async function (req,res) {
+    if (req.method === 'PATCH') {
+        const updUser = await UserModel.findByIdAndUpdate(req.params.id,{ userName: req.fields.unm, password:req.fields.pwd, emailId:req.fields.mailId}, {new: true})
         if(updUser)
-                res.render('adminViews/editUser',{userData: updUser, msg: "User Updated Successfully..."})
-    }
-    else
-        {
-    const userData = await UserModel.findOne({_id: req.params.id})
-    // console.log(userData);
-    res.render('adminViews/editUser',{userData, msg:null})
+            res.json({userData: updUser, msg: "User Updated Successfully....."})
+        else
+            res.json({msg: "User Updated Failed....."})
+    } else {
+        const userData = await UserModel.findOne({_id: req.params.id});
+    if(userData)
+        res.status(200).json({userData, msg: null})
+    else 
+        res.status(500).json({msg: "User Not found....."})
     }
 }
-
 
 const deleteUser = async function (req,res) {
     const user =  await UserModel.findByIdAndDelete (req.params.id)

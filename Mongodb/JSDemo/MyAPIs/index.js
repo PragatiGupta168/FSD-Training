@@ -5,6 +5,8 @@ const db = require('./dbconn')
 const adminodel = require('./models/adminModel')
 const app = express()
 const cors = require('cors')//13-aug
+const jwt = require("jsonwebtoken");
+const SECRET_KEY = "mysecret_key";
 //console.log(app);
 
 const HOST = 'localhost'//127.0.0.1 ethernet ko test krta hai and also it is a loopback IP
@@ -22,6 +24,7 @@ const userRoutes = require('./Routes/userRoutes')
 app.use('/user',userRoutes)
 
 //For Login
+
 app.get('/login',(req,res)=>{
     res.render('login',{msg: null})
 })
@@ -32,12 +35,21 @@ app.post('/login',async (req,res)=>{
     if(user)
     {
     if(user && (user.password === req.fields.pwd)){
-        res.redirect(user.hasRole === 'admin'?'/admin': '/user')
+        const token = jwt.sign(
+            {
+                id:user._id, email: user.useremailId
+            },
+            SECRET_KEY,
+            {expiresIn: "1h"}
+        );
+        res.json({success: true, message: "", user, token})
+        // res.redirect(user.hasRole === 'admin'?'/admin': '/user')
     }
     }
     else
     {
-        res.render('login', {msg: 'Invalid User Id'})
+        // res.render('login', {msg: 'Invalid User Id'})
+        res.json({success: false, message: "Invalid User Id"})
     }
     
     // res.render('login',{msg: null})

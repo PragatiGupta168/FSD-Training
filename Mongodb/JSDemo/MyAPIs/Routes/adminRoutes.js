@@ -31,10 +31,12 @@ router.get('/showUser', showUsers)
 
 //localhost:8000/admin/editUser
 router.get('/editUser/:id', editUser)
-router.post('/editUser/:id', editUser)
+// router.post('/editUser/:id', editUser)
+router.patch('/editUser/:id', editUser)
 
 //localhost:8000/admin/deleteUser
 router.get('/deleteUser/:id', deleteUser)
+router.post('/deleteUser/:id', deleteUser)
 
 
 //localhost:8000/admin/Pragati
