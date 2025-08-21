@@ -9,7 +9,9 @@ const UserSchema = new mongoose.Schema({
     emailId: { type: String, required: true, unique: true }, // email id bhi dena zaroori hai
     isActive: { type: Boolean, required: true, default: false }, // account active hai ya nahi (default: false)
     hasRole: { type: String, enum: ["admin", "user"], default: 'user' }, // role ya toh admin ya user (default: user)
-    createdAt: { type: Date, default: Date.now } // account banne ka time (auto set hota hai)
+    createdAt: { type: Date, default: Date.now }, // account banne ka time (auto set hota hai)
+    regDate : { type: Date, required: true, default: Date.now },
+    profilePic: { type: String}
 })
 
 // Model banaya jisse database me collection create hoga (UserModel)

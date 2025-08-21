@@ -1,4 +1,6 @@
 const UserModel = require('../models/adminModel')
+const path = require('path')
+const fs = require('fs')
 
 const adminDefault = function(req, res){
     // res.send("<h1 align='center'> Admin Default Page </h1>")
@@ -7,7 +9,6 @@ const adminDefault = function(req, res){
 
 const adminHome = function(req, res){
     // res.send("<h1 align='center'> Admin Home Page </h1>")
-
 
     let userData = [
         {uid: 1001, unm: 'Pragati', email: 'pragati168@gmail.com'},
@@ -19,22 +20,43 @@ const adminHome = function(req, res){
     res.render('adminViews/home.ejs',{userData})
 }
 
-
 const getAdminData = function(req,res){
     let nm = req.params.adminNm
     res.send(`<h1 align='center'> Admin ${nm} Data Page </h1>`)
 }
 
-
 //localhost:8000/admin/addUser, method=post
 const addUser = async function(req,res)
 {
     if(req.method === 'POST'){
-        // console.log(req.fields);
+        console.log(req.fields);
+
+        const file = req.files.profilePic;//profilePic is name of upload control
+        let filePath = "";
+        if(file){
+
+            //C:\Users\praga\OneDrive\Desktop\FSD\Mongodb\JSDemo\MyAPIs\controllers
+            const uploadPath = path.join(__dirname, '../public','uploads');
+
+            // console.log("UPath:",uploadPath)
+            // console.log("_dirname:", __dirname)
+
+            if(!fs.existsSync(uploadPath)){
+                fs.mkdirSync(uploadPath);
+            }
+            const newFileName = Date.now() + '-' + file.name;
+            const fullFilePath = path.join(uploadPath, newFileName);
+            // console.log("Full File Path:", fullFilePath); for checking the path of fullFilePath
+            // console.log("fileName:", newFileName); for checking the name of the filePath
+            fs.renameSync(file.path, fullFilePath);
+            filePath = "/uploads/" + newFileName;
+        }
+
         const newUser = new UserModel({
         userName : req.fields.unm,
         password: req.fields.pwd,
-        emailId: req.fields.mailId    
+        emailId: req.fields.mailId,
+        profilePic: filePath
         })
 
         let user = await newUser.save()
@@ -93,7 +115,9 @@ const editUser = async function (req,res) {
 const deleteUser = async function (req,res) {
     const user =  await UserModel.findByIdAndDelete (req.params.id)
     if(user)
-        res.redirect('/admin/showUser')
+        // res.redirect('/admin/showUser')
+    res.json({msg: "User Deleted Successfully.....", user}) //13-aug
+    
 }
 
 
